@@ -24,20 +24,20 @@ tags: [随笔, 记录]
 
 ## 发布到 GitHub Pages
 
-1. 将本项目推送至公开仓库 `MAChine110p/pxc`，网站地址为 `https://MAChine110p.github.io/pxc/`。
-2. 在本地进入此 `personal-site` 文件夹，初始化并推送：
+1. 网站文件已上传到公开仓库 `MAChine110p/pxc`，预期地址为 `https://MAChine110p.github.io/pxc/`。
+2. 在仓库打开 **Settings → Pages**，在 **Build and deployment** 选择 **Deploy from a branch**，分支选 `main`，目录选 `/(root)` 并保存。GitHub Pages 会自动用 Jekyll 构建；部署完成后可从 Pages 设置页打开网站。
+3. 若要在本地编辑并推送更新，先克隆仓库：
 
    ```bash
-   git init
+   git clone https://github.com/MAChine110p/pxc.git
+   cd pxc
+   # 编辑网站文件后执行：
    git add .
-   git commit -m "Build personal website and blog"
-   git branch -M main
-   git remote add origin https://github.com/MAChine110p/pxc.git
-   git push -u origin main
+   git commit -m "Update personal website"
+   git push
    ```
 
-3. GitHub 仓库打开 **Settings → Pages**，在 **Build and deployment** 选择 **Deploy from a branch**，分支选择 `main`，目录选择 `/(root)` 并保存。GitHub Pages 会自动用 Jekyll 构建；稍等片刻后会显示站点地址。
-4. `_config.yml` 已设置 `baseurl: "/pxc"`。推送后即可触发重新部署。
+4. `_config.yml` 已设置 `baseurl: "/pxc"`。之后每次推送都会触发重新部署。
 
 ## 本地预览（可选）
 
