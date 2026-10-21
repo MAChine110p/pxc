@@ -1,0 +1,41 @@
+title: "蒲星澄"
+description: "个人主页与写作空间"
+url: "https://MAChine110p.github.io"
+baseurl: "/pxc"
+lang: zh-CN
+timezone: Asia/Shanghai
+markdown: kramdown
+permalink: /blog/:year/:month/:day/:title/
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+include:
+  - _pages
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+
+author:
+  name: "蒲星澄"
+  role: "个人主页 · 博客写作者"
+  location: "中国"
+  email: "p1823066877@outlook.com"
+  github: "https://github.com/MAChine110p"
+  intro: "你好，我在这里记录正在做的事、感兴趣的问题，以及一路上的新发现。"
+
+collections:
+  pages:
+    output: true
+    permalink: /:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      author: "蒲星澄"
+      permalink: /blog/:year/:month/:day/:title/
+
