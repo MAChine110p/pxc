@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="{{ site.lang | default: 'zh-CN' }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f7f7f4">
+    <title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
+    <meta name="description" content="{{ page.description | default: site.description }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    {% feed_meta %}{% seo %}
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="mobile-header"><a class="brand" href="{{ '/' | relative_url }}"><span class="brand-mark">Y</span>{{ site.author.name }}</a><button class="menu-toggle" aria-label="打开导航" aria-expanded="false"><span></span><span></span></button></header>
+      <aside class="sidebar">
+        <a class="brand desktop-brand" href="{{ '/' | relative_url }}"><span class="brand-mark">Y</span><span>{{ site.author.name }}</span></a>
+        <div class="profile-card">
+          <div class="avatar-wrap"><div class="avatar" aria-hidden="true">{{ site.author.name | slice: 0 }}</div><span class="online-dot" title="欢迎来访"></span></div>
+          <h2>{{ site.author.name }}</h2><p class="profile-role">{{ site.author.role }}</p>
+          <p class="profile-intro">{{ site.author.intro }}</p>
+          <div class="location"><span aria-hidden="true">⌖</span>{{ site.author.location }}</div>
+          <a class="email-link" href="mailto:{{ site.author.email }}"><span aria-hidden="true">✉</span> {{ site.author.email }}</a>
+        </div>
+        <nav class="main-nav" aria-label="主导航">
+          <a href="{{ '/' | relative_url }}" {% if page.url == '/' %}aria-current="page"{% endif %}><span class="nav-icon">⌂</span>首页</a>
+          <a href="{{ '/about/' | relative_url }}" {% if page.url == '/about/' %}aria-current="page"{% endif %}><span class="nav-icon">◉</span>关于我</a>
+          <a href="{{ '/blog/' | relative_url }}" {% if page.url contains '/blog' %}aria-current="page"{% endif %}><span class="nav-icon">▤</span>博客 <span class="nav-count">{{ site.posts.size | prepend: '00' | slice: -2, 2 }}</span></a>
+        </nav>
+        <div class="sidebar-bottom"><p class="eyebrow">ELSEWHERE</p><a href="{{ site.author.github }}" target="_blank" rel="noopener">GitHub <span>↗</span></a><div class="sidebar-caption">保持好奇，持续创造。</div></div>
+      </aside>
+      <main class="main-content">
+        <div class="topline"><span><span class="status-dot"></span> {{ site.author.location }} · 在线漫游中</span><span class="topline-right">{{ site.time | date: "%Y / %m / %d" }}</span></div>
+        <div class="content-inner">{{ content }}</div>
+        <footer class="site-footer"><span>© {{ site.time | date: "%Y" }} {{ site.author.name }}</span><span>用一点点耐心，慢慢搭建。</span></footer>
+      </main>
+    </div>
+    <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+  </body>
+</html>
+
