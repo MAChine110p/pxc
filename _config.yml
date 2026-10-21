@@ -1,5 +1,5 @@
 title: "蒲星澄"
-description: "个人主页与写作空间"
+description: "蒲星澄的个人主页与学习记录"
 url: "https://MAChine110p.github.io"
 baseurl: "/pxc"
 lang: zh-CN
@@ -19,11 +19,11 @@ exclude:
 
 author:
   name: "蒲星澄"
-  role: "个人主页 · 博客写作者"
+  role: "北京理工大学 · 信息管理与信息系统"
   location: "中国"
   email: "p1823066877@outlook.com"
   github: "https://github.com/MAChine110p"
-  intro: "你好，我在这里记录正在做的事、感兴趣的问题，以及一路上的新发现。"
+  intro: "关注机器学习、计算机视觉与智能系统，持续把学习转化为实践。"
 
 collections:
   pages:
