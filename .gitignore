@@ -4,3 +4,6 @@ _site/
 .bundle/
 vendor/
 
+
+# local preview only (not part of the Jekyll build)
+_preview/
